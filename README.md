@@ -2,7 +2,7 @@
 
 A Retrieval-Augmented Generation (RAG) chatbot that lets you upload PDF documents and ask questions about them in plain English. Answers are grounded only in your documents and come with source file and page references, which reduces hallucinations.
 
-**Live demo:** [add your Streamlit link here]
+**Live demo:**     https://documind-prajwal.streamlit.app
 
 ## How it works
 
@@ -20,7 +20,7 @@ Python · Streamlit · LangChain · FAISS · Sentence Transformers · Groq (GPT-
 ## Run locally
 
 ```bash
-git clone https://github.com/[username]/documind.git
+git clone https://github.com/BangariPrajwal/documind.git
 cd documind
 python -m venv venv
 venv\Scripts\activate        # Windows  (Mac/Linux: source venv/bin/activate)
