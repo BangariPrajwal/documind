@@ -1,0 +1,25 @@
+{
+  "document": "MSc dissertation: Detecting Rare Fraudulent Card Transactions under Extreme Class Imbalance (Bangari Prajwal, University of Surrey, 2026). 82 pages. Page numbers are physical PDF pages.",
+  "questions": [
+    {"id": "q01", "question": "How many transactions are in the dataset used in this study?", "gold_pages": [2, 3, 14, 25, 31, 33, 37, 50, 68], "must_contain": ["284807"]},
+    {"id": "q02", "question": "How many of the transactions are fraudulent?", "gold_pages": [2, 14, 25, 31, 68], "must_contain": ["492"]},
+    {"id": "q03", "question": "Which model and imbalance strategy performed best, and what was its test PR-AUC?", "gold_pages": [2, 3], "must_contain": ["xgboost", "0.881"]},
+    {"id": "q04", "question": "Who supervised this dissertation?", "gold_pages": [1, 4, 78], "must_contain": ["xiaowei"]},
+    {"id": "q05", "question": "Which OpenML dataset ID was used to load the data?", "gold_pages": [25, 78], "must_contain": ["42175"]},
+    {"id": "q06", "question": "Why was the data accessed through OpenML instead of Kaggle?", "gold_pages": [25], "must_contain_any": ["registration", "login", "log in", "sign up"]},
+    {"id": "q07", "question": "How many exact duplicate rows does the dataset contain?", "gold_pages": [25, 37], "must_contain": ["1081"]},
+    {"id": "q08", "question": "Under what licence is the dataset published?", "gold_pages": [25, 78], "must_contain": ["open database"]},
+    {"id": "q09", "question": "How was the data split into training and test sets?", "gold_pages": [26, 37], "must_contain_any": ["80/20", "80% ", "80 %", "80-20"]},
+    {"id": "q10", "question": "How many transactions are in the held-out test set?", "gold_pages": [2, 16, 26, 39, 61], "must_contain": ["56962"]},
+    {"id": "q11", "question": "What cost ratio between a false negative and a false positive was assumed?", "gold_pages": [28], "must_contain_any": ["50:1", "50 to 1", "0.02", "fifty"]},
+    {"id": "q12", "question": "Which statistical test and correction were used to compare pipelines?", "gold_pages": [2, 42, 61, 62, 80, 81], "must_contain": ["holm"]},
+    {"id": "q13", "question": "Why could the Wilcoxon signed-rank test not be used as the basis of the result?", "gold_pages": [42, 64, 81, 82], "must_contain": ["0.0625"]},
+    {"id": "q14", "question": "What PR-AUC did SMOTE achieve with the correct protocol compared with the leaky protocol?", "gold_pages": [2, 48, 49, 63, 81], "must_contain": ["0.853"]},
+    {"id": "q15", "question": "Which feature had the highest mean absolute SHAP value?", "gold_pages": [34, 51, 53], "must_contain": ["v14"]},
+    {"id": "q16", "question": "What PR-AUC is achieved using only the Time and Amount features?", "gold_pages": [50, 51], "must_contain": ["0.0157"]},
+    {"id": "q17", "question": "Is the difference between SMOTE and cost-sensitive weighting statistically significant?", "gold_pages": [2, 42, 56, 81], "must_contain_any": ["not significant", "not statistically significant", "no significant", "no statistically significant", "not distinguish", "unable to distinguish"]},
+    {"id": "u01", "question": "What is the population of Guildford?", "answerable": false},
+    {"id": "u02", "question": "How much did the cloud computing for this project cost in pounds?", "answerable": false},
+    {"id": "u03", "question": "Which bank paid for this research?", "answerable": false}
+  ]
+}

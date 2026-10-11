@@ -1,0 +1,1582 @@
+{
+  "run_at": "2026-10-11 20:15 UTC",
+  "llm_model": "openai/gpt-oss-20b",
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "question_count": 20,
+  "runs": [
+    {
+      "config": {
+        "chunk_size": 500,
+        "chunk_overlap": 75,
+        "k": 4,
+        "chunks": 489
+      },
+      "summary": {
+        "questions": 20,
+        "retrieval_hit_rate": 0.824,
+        "answer_accuracy": 0.588,
+        "citation_accuracy": 0.765,
+        "citation_grounding": 1.0,
+        "refusal_accuracy": 1.0,
+        "avg_seconds": 0.99,
+        "p95_seconds": 1.98
+      },
+      "rows": [
+        {
+          "id": "q01",
+          "question": "How many transactions are in the dataset used in this study?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            3,
+            14,
+            25,
+            31,
+            33,
+            37,
+            50,
+            68
+          ],
+          "retrieved_pages": [
+            9,
+            14,
+            31,
+            63
+          ],
+          "retrieval_hit": true,
+          "answer": "The study used a stratified sample of 507,567 transactions.  \nSources: page 63",
+          "cited_pages": [
+            63
+          ],
+          "refused": false,
+          "seconds": 1.239,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q02",
+          "question": "How many of the transactions are fraudulent?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            14,
+            25,
+            31,
+            68
+          ],
+          "retrieved_pages": [
+            2,
+            14,
+            17,
+            32
+          ],
+          "retrieval_hit": true,
+          "answer": "492 transactions are fraudulent.  \nSources: page 2, page 32",
+          "cited_pages": [
+            2,
+            32
+          ],
+          "refused": false,
+          "seconds": 0.825,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q03",
+          "question": "Which model and imbalance strategy performed best, and what was its test PR-AUC?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            3
+          ],
+          "retrieved_pages": [
+            10,
+            49,
+            57,
+            66
+          ],
+          "retrieval_hit": false,
+          "answer": "The best overall result was achieved by **XGBoost** using the imbalance strategy that produced the highest cell PR\u2011AUC.  Its test PR\u2011AUC was **0.8806**.  \n\nSources: page 57",
+          "cited_pages": [
+            57
+          ],
+          "refused": false,
+          "seconds": 1.983,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q04",
+          "question": "Who supervised this dissertation?",
+          "answerable": true,
+          "gold_pages": [
+            1,
+            4,
+            78
+          ],
+          "retrieved_pages": [
+            5,
+            7,
+            68,
+            69
+          ],
+          "retrieval_hit": false,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 1.881,
+          "citation_grounded": null,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q05",
+          "question": "Which OpenML dataset ID was used to load the data?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            78
+          ],
+          "retrieved_pages": [
+            25,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The study used OpenML dataset ID **42175** to load the data.  \nSources: page 25, page 78",
+          "cited_pages": [
+            25,
+            78
+          ],
+          "refused": false,
+          "seconds": 1.062,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q06",
+          "question": "Why was the data accessed through OpenML instead of Kaggle?",
+          "answerable": true,
+          "gold_pages": [
+            25
+          ],
+          "retrieved_pages": [
+            25,
+            48,
+            61,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The data was accessed through OpenML because it offers a stable, citable identifier and does not require any login or registration, which greatly improves reproducibility. Readers can download the data using only code, without a registration process.  \n\nSources: page 25",
+          "cited_pages": [
+            25
+          ],
+          "refused": false,
+          "seconds": 0.853,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q07",
+          "question": "How many exact duplicate rows does the dataset contain?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            37
+          ],
+          "retrieved_pages": [
+            7,
+            31,
+            32,
+            37
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset contains 1,854 rows that are exact duplicates.  \nSources: page 37",
+          "cited_pages": [
+            37
+          ],
+          "refused": false,
+          "seconds": 1.197,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": true
+        },
+        {
+          "id": "q08",
+          "question": "Under what licence is the dataset published?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            78
+          ],
+          "retrieved_pages": [
+            25,
+            30,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset is published under the Open Database Licence.  \nSources: page 25, page 78",
+          "cited_pages": [
+            25,
+            78
+          ],
+          "refused": false,
+          "seconds": 0.62,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q09",
+          "question": "How was the data split into training and test sets?",
+          "answerable": true,
+          "gold_pages": [
+            26,
+            37
+          ],
+          "retrieved_pages": [
+            11,
+            29,
+            37,
+            65
+          ],
+          "retrieval_hit": true,
+          "answer": "The data were partitioned into a training set and a separate test set.  \nThe test partition was kept closed until after all training steps, while the training split was used for resampling, scaling, and hyperparameter tuning.  \n\nSources: page 11, page 37",
+          "cited_pages": [
+            11,
+            37
+          ],
+          "refused": false,
+          "seconds": 1.231,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": true
+        },
+        {
+          "id": "q10",
+          "question": "How many transactions are in the held-out test set?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            16,
+            26,
+            39,
+            61
+          ],
+          "retrieved_pages": [
+            14,
+            26,
+            39,
+            46
+          ],
+          "retrieval_hit": true,
+          "answer": "The held\u2011out test set contains 56,962 transactions.  \nSources: page 26, page 39",
+          "cited_pages": [
+            26,
+            39
+          ],
+          "refused": false,
+          "seconds": 0.543,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q11",
+          "question": "What cost ratio between a false negative and a false positive was assumed?",
+          "answerable": true,
+          "gold_pages": [
+            28
+          ],
+          "retrieved_pages": [
+            15,
+            28,
+            46
+          ],
+          "retrieval_hit": true,
+          "answer": "The assumed cost ratio between a false negative and a false positive was 50:1.  \n\nSources: page 28",
+          "cited_pages": [
+            28
+          ],
+          "refused": false,
+          "seconds": 0.895,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q12",
+          "question": "Which statistical test and correction were used to compare pipelines?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            42,
+            61,
+            62,
+            80,
+            81
+          ],
+          "retrieved_pages": [
+            3,
+            26,
+            68,
+            69
+          ],
+          "retrieval_hit": false,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.966,
+          "citation_grounded": null,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q13",
+          "question": "Why could the Wilcoxon signed-rank test not be used as the basis of the result?",
+          "answerable": true,
+          "gold_pages": [
+            42,
+            64,
+            81,
+            82
+          ],
+          "retrieved_pages": [
+            42,
+            64,
+            67,
+            81
+          ],
+          "retrieval_hit": true,
+          "answer": "The Wilcoxon signed\u2011rank test could not be used as the basis of the result because, with only five paired folds, the design limits the smallest attainable two\u2011sided p\u2011value to 0.0625. This value is above the conventional 0.05 threshold, so the test cannot achieve conventional significance independent of effect size.  \n\nSources: page 42, page 64",
+          "cited_pages": [
+            42,
+            64
+          ],
+          "refused": false,
+          "seconds": 0.855,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q14",
+          "question": "What PR-AUC did SMOTE achieve with the correct protocol compared with the leaky protocol?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            48,
+            49,
+            63,
+            81
+          ],
+          "retrieved_pages": [
+            3,
+            26,
+            48,
+            55
+          ],
+          "retrieval_hit": true,
+          "answer": "SMOTE achieved a PR\u2011AUC of **0.9514** with the correct, leakage\u2011free protocol, whereas the leaky (improper) protocol reported a PR\u2011AUC of **1.0000**.  \n\nSources: page 48",
+          "cited_pages": [
+            48
+          ],
+          "refused": false,
+          "seconds": 1.36,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": true
+        },
+        {
+          "id": "q15",
+          "question": "Which feature had the highest mean absolute SHAP value?",
+          "answerable": true,
+          "gold_pages": [
+            34,
+            51,
+            53
+          ],
+          "retrieved_pages": [
+            9,
+            12,
+            51,
+            52
+          ],
+          "retrieval_hit": true,
+          "answer": "The feature with the highest mean absolute SHAP value is **V14**.  \n\nSources: page 51",
+          "cited_pages": [
+            51
+          ],
+          "refused": false,
+          "seconds": 0.349,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q16",
+          "question": "What PR-AUC is achieved using only the Time and Amount features?",
+          "answerable": true,
+          "gold_pages": [
+            50,
+            51
+          ],
+          "retrieved_pages": [
+            22,
+            30,
+            51
+          ],
+          "retrieval_hit": true,
+          "answer": "The PR\u2011AUC achieved using only the Time and Amount features is **0.0157**.  \n\nSources: page\u202f51",
+          "cited_pages": [
+            51
+          ],
+          "refused": false,
+          "seconds": 0.754,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q17",
+          "question": "Is the difference between SMOTE and cost-sensitive weighting statistically significant?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            42,
+            56,
+            81
+          ],
+          "retrieved_pages": [
+            55,
+            64,
+            70,
+            81
+          ],
+          "retrieval_hit": true,
+          "answer": "Yes \u2013 for Logistic Regression and Random Forest the difference is statistically significant (SMOTE is significantly better). For XGBoost there is no significant difference.  \n\nSources: page 81",
+          "cited_pages": [
+            81
+          ],
+          "refused": false,
+          "seconds": 0.962,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "u01",
+          "question": "What is the population of Guildford?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            1,
+            6,
+            12,
+            72
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.55,
+          "citation_grounded": null,
+          "refusal_correct": true
+        },
+        {
+          "id": "u02",
+          "question": "How much did the cloud computing for this project cost in pounds?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            9,
+            12,
+            25,
+            44
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.549,
+          "citation_grounded": null,
+          "refusal_correct": true
+        },
+        {
+          "id": "u03",
+          "question": "Which bank paid for this research?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            14,
+            62,
+            74,
+            78
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 1.163,
+          "citation_grounded": null,
+          "refusal_correct": true
+        }
+      ]
+    },
+    {
+      "config": {
+        "chunk_size": 1000,
+        "chunk_overlap": 150,
+        "k": 4,
+        "chunks": 269
+      },
+      "summary": {
+        "questions": 20,
+        "retrieval_hit_rate": 0.882,
+        "answer_accuracy": 0.824,
+        "citation_accuracy": 0.824,
+        "citation_grounding": 1.0,
+        "refusal_accuracy": 1.0,
+        "avg_seconds": 0.66,
+        "p95_seconds": 0.86
+      },
+      "rows": [
+        {
+          "id": "q01",
+          "question": "How many transactions are in the dataset used in this study?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            3,
+            14,
+            25,
+            31,
+            33,
+            37,
+            50,
+            68
+          ],
+          "retrieved_pages": [
+            11,
+            14,
+            31,
+            63
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset used in this study contains **284,807 transactions**.  \n\nSources: page 14, page 31",
+          "cited_pages": [
+            14,
+            31
+          ],
+          "refused": false,
+          "seconds": 0.646,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q02",
+          "question": "How many of the transactions are fraudulent?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            14,
+            25,
+            31,
+            68
+          ],
+          "retrieved_pages": [
+            11,
+            14,
+            32,
+            63
+          ],
+          "retrieval_hit": true,
+          "answer": "There are 492 fraudulent transactions in the dataset.  \n\nSources: page 14, page 32",
+          "cited_pages": [
+            14,
+            32
+          ],
+          "refused": false,
+          "seconds": 0.55,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q03",
+          "question": "Which model and imbalance strategy performed best, and what was its test PR-AUC?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            3
+          ],
+          "retrieved_pages": [
+            2,
+            41,
+            55,
+            57
+          ],
+          "retrieval_hit": true,
+          "answer": "The best performing combination was **XGBoost with SMOTE oversampling**, achieving a test PR\u2011AUC of **0.881**.  \n\nSources: page 2",
+          "cited_pages": [
+            2
+          ],
+          "refused": false,
+          "seconds": 0.652,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q04",
+          "question": "Who supervised this dissertation?",
+          "answerable": true,
+          "gold_pages": [
+            1,
+            4,
+            78
+          ],
+          "retrieved_pages": [
+            5,
+            7,
+            9,
+            16
+          ],
+          "retrieval_hit": false,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.651,
+          "citation_grounded": null,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q05",
+          "question": "Which OpenML dataset ID was used to load the data?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            78
+          ],
+          "retrieved_pages": [
+            6,
+            25,
+            37,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The study used OpenML dataset ID **42175** (`CreditCardFraudDetection`).  \nSources: page 25",
+          "cited_pages": [
+            25
+          ],
+          "refused": false,
+          "seconds": 0.65,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q06",
+          "question": "Why was the data accessed through OpenML instead of Kaggle?",
+          "answerable": true,
+          "gold_pages": [
+            25
+          ],
+          "retrieved_pages": [
+            25,
+            48,
+            61,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The data was accessed through OpenML because it offers a stable, citable identifier and does not require any login or registration, making it easier for readers to reproduce the work. In contrast, Kaggle requires user registration.  \n\nSources: page 25",
+          "cited_pages": [
+            25
+          ],
+          "refused": false,
+          "seconds": 0.858,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q07",
+          "question": "How many exact duplicate rows does the dataset contain?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            37
+          ],
+          "retrieved_pages": [
+            7,
+            31,
+            37,
+            50
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset contains **1,081 exact duplicate rows**.  \nSources: page 37",
+          "cited_pages": [
+            37
+          ],
+          "refused": false,
+          "seconds": 0.856,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q08",
+          "question": "Under what licence is the dataset published?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            78
+          ],
+          "retrieved_pages": [
+            25,
+            30,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset is published under the Open Database Licence.  \nSources: page 25, page 25",
+          "cited_pages": [
+            25
+          ],
+          "refused": false,
+          "seconds": 0.643,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q09",
+          "question": "How was the data split into training and test sets?",
+          "answerable": true,
+          "gold_pages": [
+            26,
+            37
+          ],
+          "retrieved_pages": [
+            11,
+            29,
+            37,
+            65
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset was divided by a random split that was seeded with 42 to guarantee reproducibility.  \nAll preprocessing (imputation, encoding, scaling), hyper\u2011parameter search, and the inner 3\u2011fold cross\u2011validation were performed only on the training portion. The test portion was kept sealed and opened only once for the final evaluation, with no leakage from the training side.  \n\nSources: page 29, page 65, page 11",
+          "cited_pages": [
+            11,
+            29,
+            65
+          ],
+          "refused": false,
+          "seconds": 0.757,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q10",
+          "question": "How many transactions are in the held-out test set?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            16,
+            26,
+            39,
+            61
+          ],
+          "retrieved_pages": [
+            12,
+            26,
+            39,
+            46
+          ],
+          "retrieval_hit": true,
+          "answer": "The held\u2011out test set contains 56,962 transactions.  \n\nSources: page 26, page 39",
+          "cited_pages": [
+            26,
+            39
+          ],
+          "refused": false,
+          "seconds": 0.657,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q11",
+          "question": "What cost ratio between a false negative and a false positive was assumed?",
+          "answerable": true,
+          "gold_pages": [
+            28
+          ],
+          "retrieved_pages": [
+            15,
+            21,
+            28,
+            46
+          ],
+          "retrieval_hit": true,
+          "answer": "The study assumed a cost ratio of **50:1** (false negative to false positive).  \n\nSources: page 28",
+          "cited_pages": [
+            28
+          ],
+          "refused": false,
+          "seconds": 0.324,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q12",
+          "question": "Which statistical test and correction were used to compare pipelines?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            42,
+            61,
+            62,
+            80,
+            81
+          ],
+          "retrieved_pages": [
+            3,
+            26,
+            38,
+            69
+          ],
+          "retrieval_hit": false,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.572,
+          "citation_grounded": null,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q13",
+          "question": "Why could the Wilcoxon signed-rank test not be used as the basis of the result?",
+          "answerable": true,
+          "gold_pages": [
+            42,
+            64,
+            81,
+            82
+          ],
+          "retrieved_pages": [
+            12,
+            19,
+            42,
+            64
+          ],
+          "retrieval_hit": true,
+          "answer": "The Wilcoxon signed\u2011rank test could not be used as the basis of the result because, with only five paired folds, the smallest attainable two\u2011sided p\u2011value is 0.0625. This means the test can never reach the conventional 0.05 significance threshold, making it unsuitable as the primary evidence for significance.  \n\nSources: page 42, page 64",
+          "cited_pages": [
+            42,
+            64
+          ],
+          "refused": false,
+          "seconds": 0.753,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q14",
+          "question": "What PR-AUC did SMOTE achieve with the correct protocol compared with the leaky protocol?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            48,
+            49,
+            63,
+            81
+          ],
+          "retrieved_pages": [
+            3,
+            26,
+            27,
+            48
+          ],
+          "retrieval_hit": true,
+          "answer": "SMOTE\u2019s PR\u2011AUC was **0.8533** when evaluated with the correct, leakage\u2011free protocol, versus a perfect **1.0000** when the leaky protocol was used.  \n\nSources: page 48",
+          "cited_pages": [
+            48
+          ],
+          "refused": false,
+          "seconds": 0.75,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q15",
+          "question": "Which feature had the highest mean absolute SHAP value?",
+          "answerable": true,
+          "gold_pages": [
+            34,
+            51,
+            53
+          ],
+          "retrieved_pages": [
+            9,
+            51,
+            52,
+            53
+          ],
+          "retrieval_hit": true,
+          "answer": "The feature with the highest mean absolute SHAP value was **V14**.  \nSources: page 51",
+          "cited_pages": [
+            51
+          ],
+          "refused": false,
+          "seconds": 0.721,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q16",
+          "question": "What PR-AUC is achieved using only the Time and Amount features?",
+          "answerable": true,
+          "gold_pages": [
+            50,
+            51
+          ],
+          "retrieved_pages": [
+            25,
+            39,
+            51
+          ],
+          "retrieval_hit": true,
+          "answer": "The PR\u2011AUC achieved using only the Time and Amount features is **0.0157**.  \n\nSources: page\u202f51",
+          "cited_pages": [
+            51
+          ],
+          "refused": false,
+          "seconds": 0.801,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q17",
+          "question": "Is the difference between SMOTE and cost-sensitive weighting statistically significant?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            42,
+            56,
+            81
+          ],
+          "retrieved_pages": [
+            10,
+            55,
+            64,
+            81
+          ],
+          "retrieval_hit": true,
+          "answer": "Yes \u2013 for some classifiers the difference is statistically significant.  \nOn the PaySim data, SMOTE outperforms cost\u2011weighting for logistic regression (p\u202f=\u202f0.0025) and random forest (p\u202f<\u202f0.001), while XGBoost shows no significant difference.  \nOn the IEEE\u2011CIS data, logistic regression shows a significant advantage for SMOTE (p\u202f=\u202f0.0325).  \n\nSources: page\u202f81, page\u202f64",
+          "cited_pages": [
+            64,
+            81
+          ],
+          "refused": false,
+          "seconds": 0.856,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "u01",
+          "question": "What is the population of Guildford?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            6,
+            7,
+            8,
+            12
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.443,
+          "citation_grounded": null,
+          "refusal_correct": true
+        },
+        {
+          "id": "u02",
+          "question": "How much did the cloud computing for this project cost in pounds?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            9,
+            12,
+            32,
+            46
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.488,
+          "citation_grounded": null,
+          "refusal_correct": true
+        },
+        {
+          "id": "u03",
+          "question": "Which bank paid for this research?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            25,
+            62,
+            63,
+            78
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.654,
+          "citation_grounded": null,
+          "refusal_correct": true
+        }
+      ]
+    },
+    {
+      "config": {
+        "chunk_size": 1500,
+        "chunk_overlap": 225,
+        "k": 4,
+        "chunks": 186
+      },
+      "summary": {
+        "questions": 20,
+        "retrieval_hit_rate": 0.824,
+        "answer_accuracy": 0.706,
+        "citation_accuracy": 0.824,
+        "citation_grounding": 1.0,
+        "refusal_accuracy": 1.0,
+        "avg_seconds": 5.12,
+        "p95_seconds": 12.15
+      },
+      "rows": [
+        {
+          "id": "q01",
+          "question": "How many transactions are in the dataset used in this study?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            3,
+            14,
+            25,
+            31,
+            33,
+            37,
+            50,
+            68
+          ],
+          "retrieved_pages": [
+            6,
+            25,
+            31,
+            63
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset used in this study contains **284,807 transactions**.  \nSources: page 31, page 25",
+          "cited_pages": [
+            25,
+            31
+          ],
+          "refused": false,
+          "seconds": 0.761,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q02",
+          "question": "How many of the transactions are fraudulent?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            14,
+            25,
+            31,
+            68
+          ],
+          "retrieved_pages": [
+            14,
+            31,
+            32,
+            63
+          ],
+          "retrieval_hit": true,
+          "answer": "There are 492 fraudulent transactions in the dataset.  \nSources: page 14, page 31",
+          "cited_pages": [
+            14,
+            31
+          ],
+          "refused": false,
+          "seconds": 0.613,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q03",
+          "question": "Which model and imbalance strategy performed best, and what was its test PR-AUC?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            3
+          ],
+          "retrieved_pages": [
+            41,
+            49,
+            55,
+            57
+          ],
+          "retrieval_hit": false,
+          "answer": "The best\u2011performing model was **XGBoost** and the best imbalance strategy was **no resampling**.  \nThe corresponding test PR\u2011AUC was **0.8365**.  \n\nSources: page\u202f57, page\u202f55",
+          "cited_pages": [
+            55,
+            57
+          ],
+          "refused": false,
+          "seconds": 2.84,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q04",
+          "question": "Who supervised this dissertation?",
+          "answerable": true,
+          "gold_pages": [
+            1,
+            4,
+            78
+          ],
+          "retrieved_pages": [
+            5,
+            9,
+            24,
+            54
+          ],
+          "retrieval_hit": false,
+          "answer": "I could not find this in the documents.  \nSources: page 5, page 9, page 24, page 54",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 11.914,
+          "citation_grounded": null,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q05",
+          "question": "Which OpenML dataset ID was used to load the data?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            78
+          ],
+          "retrieved_pages": [
+            25,
+            37,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The study loaded the data using OpenML dataset ID **42175** (CreditCardFraudDetection).  \nSources: page\u202f25, page\u202f78",
+          "cited_pages": [
+            25,
+            78
+          ],
+          "refused": false,
+          "seconds": 1.164,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q06",
+          "question": "Why was the data accessed through OpenML instead of Kaggle?",
+          "answerable": true,
+          "gold_pages": [
+            25
+          ],
+          "retrieved_pages": [
+            25,
+            61,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset was pulled from OpenML because it offers a stable, citable identifier and does not require any login or registration, making it easier for readers to reproduce the work. In contrast, Kaggle requires user registration.  \n\nSources: page 25, page 25",
+          "cited_pages": [
+            25
+          ],
+          "refused": false,
+          "seconds": 6.281,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q07",
+          "question": "How many exact duplicate rows does the dataset contain?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            37
+          ],
+          "retrieved_pages": [
+            7,
+            31,
+            37,
+            50
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset contains 1,081 exact duplicate rows.  \nSources: page 37",
+          "cited_pages": [
+            37
+          ],
+          "refused": false,
+          "seconds": 7.839,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q08",
+          "question": "Under what licence is the dataset published?",
+          "answerable": true,
+          "gold_pages": [
+            25,
+            78
+          ],
+          "retrieved_pages": [
+            25,
+            30,
+            78
+          ],
+          "retrieval_hit": true,
+          "answer": "The dataset is published under the Open Database Licence.  \nSources: page 78, page 25",
+          "cited_pages": [
+            25,
+            78
+          ],
+          "refused": false,
+          "seconds": 12.148,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q09",
+          "question": "How was the data split into training and test sets?",
+          "answerable": true,
+          "gold_pages": [
+            26,
+            37
+          ],
+          "retrieved_pages": [
+            11,
+            26,
+            29,
+            65
+          ],
+          "retrieval_hit": true,
+          "answer": "The corpus was divided into an 80\u202f/\u202f20 split.  \nThe test portion was stratified so that it retained the overall fraud rate of 0.173\u202f% (56\u202f962 transactions).  \nThe training portion was used for all cross\u2011validation, hyper\u2011parameter tuning and model selection, and the test set was kept untouched until the final evaluation.  \n\nSources: page\u202f26",
+          "cited_pages": [
+            26
+          ],
+          "refused": false,
+          "seconds": 5.522,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": true
+        },
+        {
+          "id": "q10",
+          "question": "How many transactions are in the held-out test set?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            16,
+            26,
+            39,
+            61
+          ],
+          "retrieved_pages": [
+            6,
+            12,
+            26,
+            63
+          ],
+          "retrieval_hit": true,
+          "answer": "The held\u2011out test set contains 56,962 transactions.  \nSources: page 26",
+          "cited_pages": [
+            26
+          ],
+          "refused": false,
+          "seconds": 1.881,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q11",
+          "question": "What cost ratio between a false negative and a false positive was assumed?",
+          "answerable": true,
+          "gold_pages": [
+            28
+          ],
+          "retrieved_pages": [
+            15,
+            19,
+            28,
+            46
+          ],
+          "retrieval_hit": true,
+          "answer": "The study assumed a cost ratio of 50\u202f:\u202f1 between a false negative and a false positive.  \nSources: page 28",
+          "cited_pages": [
+            28
+          ],
+          "refused": false,
+          "seconds": 9.045,
+          "citation_grounded": true,
+          "answer_correct": false,
+          "citation_correct": true
+        },
+        {
+          "id": "q12",
+          "question": "Which statistical test and correction were used to compare pipelines?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            42,
+            61,
+            62,
+            80,
+            81
+          ],
+          "retrieved_pages": [
+            3,
+            29,
+            38,
+            69
+          ],
+          "retrieval_hit": false,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 0.754,
+          "citation_grounded": null,
+          "answer_correct": false,
+          "citation_correct": false
+        },
+        {
+          "id": "q13",
+          "question": "Why could the Wilcoxon signed-rank test not be used as the basis of the result?",
+          "answerable": true,
+          "gold_pages": [
+            42,
+            64,
+            81,
+            82
+          ],
+          "retrieved_pages": [
+            12,
+            33,
+            42,
+            48
+          ],
+          "retrieval_hit": true,
+          "answer": "The Wilcoxon signed\u2011rank test could not be used as the basis of the result because, with only five folds, the smallest attainable two\u2011sided p\u2011value is 0.0625. This means the test can never reach the conventional 0.05 significance level given the design, so it was excluded from the primary inference.  \n\nSources: page 42, page 42",
+          "cited_pages": [
+            42
+          ],
+          "refused": false,
+          "seconds": 9.764,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q14",
+          "question": "What PR-AUC did SMOTE achieve with the correct protocol compared with the leaky protocol?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            48,
+            49,
+            63,
+            81
+          ],
+          "retrieved_pages": [
+            3,
+            26,
+            48,
+            59
+          ],
+          "retrieval_hit": true,
+          "answer": "SMOTE achieved a PR\u2011AUC of **0.8533** when evaluated with the correct protocol, compared with a **1.0** PR\u2011AUC when the leaky protocol was used.  \n\nSources: page 48",
+          "cited_pages": [
+            48
+          ],
+          "refused": false,
+          "seconds": 1.776,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q15",
+          "question": "Which feature had the highest mean absolute SHAP value?",
+          "answerable": true,
+          "gold_pages": [
+            34,
+            51,
+            53
+          ],
+          "retrieved_pages": [
+            12,
+            51,
+            52,
+            53
+          ],
+          "retrieval_hit": true,
+          "answer": "The feature with the highest mean absolute SHAP value was **V14**.  \nSources: page 51",
+          "cited_pages": [
+            51
+          ],
+          "refused": false,
+          "seconds": 4.849,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q16",
+          "question": "What PR-AUC is achieved using only the Time and Amount features?",
+          "answerable": true,
+          "gold_pages": [
+            50,
+            51
+          ],
+          "retrieved_pages": [
+            27,
+            39,
+            49,
+            51
+          ],
+          "retrieval_hit": true,
+          "answer": "The PR\u2011AUC achieved using only the Time and Amount features is **0.0157**.  \n\nSources: page 51",
+          "cited_pages": [
+            51
+          ],
+          "refused": false,
+          "seconds": 9.787,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "q17",
+          "question": "Is the difference between SMOTE and cost-sensitive weighting statistically significant?",
+          "answerable": true,
+          "gold_pages": [
+            2,
+            42,
+            56,
+            81
+          ],
+          "retrieved_pages": [
+            10,
+            55,
+            81
+          ],
+          "retrieval_hit": true,
+          "answer": "The significance of the SMOTE vs. cost\u2011weighting difference is not uniform.  \nFor the PaySim data (Table\u202fB.7) SMOTE is significantly better for Logistic\u202fRegression (p\u202f=\u202f0.0025) and Random\u202fForest (p\u202f<\u202f0.001), but not for XGBoost (p\u202f=\u202f0.2077).  \nFor the IEEE\u2011CIS data (Table\u202fB.8) SMOTE is significantly better only for Logistic\u202fRegression (p\u202f=\u202f0.0325); Random\u202fForest and XGBoost show no significant difference.  \n\nThus, the difference is statistically significant only for some classifiers/datasets, not in general.  \n\nSources: page\u202f55, page\u202f81",
+          "cited_pages": [
+            55,
+            81
+          ],
+          "refused": false,
+          "seconds": 1.351,
+          "citation_grounded": true,
+          "answer_correct": true,
+          "citation_correct": true
+        },
+        {
+          "id": "u01",
+          "question": "What is the population of Guildford?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            6,
+            7,
+            8,
+            12
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 6.337,
+          "citation_grounded": null,
+          "refusal_correct": true
+        },
+        {
+          "id": "u02",
+          "question": "How much did the cloud computing for this project cost in pounds?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            4,
+            12,
+            60,
+            77
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 1.007,
+          "citation_grounded": null,
+          "refusal_correct": true
+        },
+        {
+          "id": "u03",
+          "question": "Which bank paid for this research?",
+          "answerable": false,
+          "gold_pages": [],
+          "retrieved_pages": [
+            22,
+            25,
+            62,
+            78
+          ],
+          "retrieval_hit": null,
+          "answer": "I could not find this in the documents.",
+          "cited_pages": [],
+          "refused": true,
+          "seconds": 6.838,
+          "citation_grounded": null,
+          "refusal_correct": true
+        }
+      ]
+    }
+  ]
+}
