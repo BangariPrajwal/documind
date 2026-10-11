@@ -1,0 +1,8 @@
+# Light dependencies for running the tests (no model downloads, no API key)
+pypdf
+faiss-cpu
+numpy
+langchain-text-splitters
+python-dotenv
+reportlab
+pytest
