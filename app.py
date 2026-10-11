@@ -169,11 +169,11 @@ with eval_tab:
             })
         table = pd.DataFrame(rows)
         st.dataframe(
-                           table.style.format({**{c: "{:.0%}" for c in table.columns if c not in ("Chunk size", "Avg seconds")}, "Avg seconds": "{:.2f}"}, na_rep="–"),{c: "{:.0%}" for c in table.columns if c not in ("Chunk size", "Avg seconds")}, na_rep="–"),
+            table.style.format({**{c: "{:.0%}" for c in table.columns if c not in ("Chunk size", "Avg seconds")}, "Avg seconds": "{:.2f}"}, na_rep="–"),
             width="stretch", hide_index=True,
         )
         metric_cols = ["Retrieval hit", "Answer accuracy", "Citation accuracy"]
-                                                                                     st.bar_chart(table.set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")             .set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")             .set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")             .set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")             .set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")             .set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")             .set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")             .set_index("Chunk size")[metric_cols].astype(float))
+        st.bar_chart(table.set_index("Chunk size")[metric_cols].astype(float), stack=False, y_label="Score (0 to 1)")
         with st.expander("What do these metrics mean?"):
             st.markdown(
                 "- **Retrieval hit**: the search found a chunk from a page that contains the answer.\n"
